@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservas - Hotel Pet</title>
+</head>
+<body>
+  <div class="container">
+    <aside class="menu-lateral">
+      <div class="logo">
+        <img src="imagens/logo.svg" alt="Logo do Hotel Pet">
+        <span>Hotel Pet</span>
+      </div>
+      <nav class="menu">
+        <a href="pets.html" class="item">🐾 Pet</a>
+        <a href="usuarios.html" class="item">👤 Usuários</a>
+        <a href="configuracoes.html" class="item">⚙️ Configurações</a>
+        <a href="reservas.html" class="item ativo">📖 Reservas</a>
+      </nav>
+    </aside>
+
+    <div class="corpo">
+      <header class="topo">
+        <a href="perfil.html" class="usuario-topo">
+          <img src="imagens/avatar-joao.svg" alt="Foto de João da Silva">
+          <span>João da Silva</span>
+        </a>
+      </header>
+
+      <main class="conteudo">
+        <div class="breadcrumb"><a href="index.html">Home</a> / Reservas</div>
+        <h1 class="titulo-pagina">Reservas</h1>
+
+        <div class="acoes">
+          <a href="reserva_cadastrar.html" class="btn btn-primario">+ Nova reserva</a>
+        </div>
+
+        <section class="card">
+          <h2>Pesquisar reservas</h2>
+          <div class="filtro">
+            <div class="campo">
+              <label for="f-id">ID</label>
+              <input type="text" id="f-id" placeholder="Ex.: 4">
+            </div>
+            <div class="campo">
+              <label for="f-cliente">Cliente</label>
+              <input type="text" id="f-cliente" placeholder="Nome do cliente">
+            </div>
+            <div class="campo">
+              <label for="f-pet">Pet</label>
+              <input type="text" id="f-pet" placeholder="Nome do pet">
+            </div>
+            <div class="campo">
+              <label for="f-status">Status</label>
+              <select id="f-status">
+                <option>Todos</option>
+                <option>Em andamento</option>
+                <option>Finalizada</option>
+                <option>Pendente</option>
+              </select>
+            </div>
+            <div class="campo">
+              <label for="f-entrada">Check-in</label>
+              <input type="date" id="f-entrada">
+            </div>
+            <div class="campo">
+              <label for="f-saida">Check-out</label>
+              <input type="date" id="f-saida">
+            </div>
+            <div class="filtro-acoes">
+              <button type="button" class="btn btn-primario">🔍 Pesquisar</button>
+              <button type="button" class="btn btn-secundario">↻ Limpar</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="card">
+          <table class="tabela">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Pet</th>
+                <th>Cliente</th>
+                <th>Check-in</th>
+                <th>Check-out</th>
+                <th>Diárias</th>
+                <th>Status</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>#1</td>
+                <td>
+                  <div class="icone-lista">
+                    <span class="foto-pet foto-cachorro">🐶</span>
+                    <span>Toto<small>Poodle</small></span>
+                  </div>
+                </td>
+                <td>Maria da Silva</td>
+                <td>10/08/2026</td>
+                <td>14/08/2026</td>
+                <td>4</td>
+                <td><span class="status status-andamento">Em andamento</span></td>
+                <td>
+                  <a href="reserva_editar.html" class="acao-link acao-editar">Editar</a>
+                  <a href="reserva_visualizar.html" class="acao-link acao-visualizar">Visualizar</a>
+                </td>
+              </tr>
+              <tr>
+                <td>#2</td>
+                <td>
+                  <div class="icone-lista">
+                    <span class="foto-pet foto-gato">🐱</span>
+                    <span>Mia<small>Siamês</small></span>
+                  </div>
+                </td>
+                <td>José da Silva</td>
+                <td>15/08/2026</td>
+                <td>20/08/2026</td>
+                <td>5</td>
+                <td><span class="status status-pendente">Pendente</span></td>
+                <td>
+                  <a href="reserva_editar.html" class="acao-link acao-editar">Editar</a>
+                  <a href="reserva_visualizar.html" class="acao-link acao-visualizar">Visualizar</a>
+                </td>
+              </tr>
+              <tr>
+                <td>#3</td>
+                <td>
+                  <div class="icone-lista">
+                    <span class="foto-pet foto-coelho">🐰</span>
+                    <span>Bolinha<small>Angorá</small></span>
+                  </div>
+                </td>
+                <td>Ana Souza</td>
+                <td>01/08/2026</td>
+                <td>03/08/2026</td>
+                <td>2</td>
+                <td><span class="status status-finalizada">Finalizada</span></td>
+                <td>
+                  <a href="reserva_editar.html" class="acao-link acao-editar">Editar</a>
+                  <a href="reserva_visualizar.html" class="acao-link acao-visualizar">Visualizar</a>
+                </td>
+              </tr>
+              <tr>
+                <td>#4</td>
+                <td>
+                  <div class="icone-lista">
+                    <span class="foto-pet foto-passaro">🐦</span>
+                    <span>Piu-Piu<small>Calopsita</small></span>
+                  </div>
+                </td>
+                <td>Carlos Mendes</td>
+                <td>05/08/2026</td>
+                <td>12/08/2026</td>
+                <td>7</td>
+                <td><span class="status status-andamento">Em andamento</span></td>
+                <td>
+                  <a href="reserva_editar.html" class="acao-link acao-editar">Editar</a>
+                  <a href="reserva_visualizar.html" class="acao-link acao-visualizar">Visualizar</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editar Pet - Hotel Pet</title>
+</head>
+<body>
+  <div class="container">
+    <aside class="menu-lateral">
+      <div class="logo">
+        <img src="imagens/logo.svg" alt="Logo do Hotel Pet">
+        <span>Hotel Pet</span>
+      </div>
+      <nav class="menu">
+        <a href="pets.html" class="item ativo">🐾 Pet</a>
+        <a href="usuarios.html" class="item">👤 Usuários</a>
+        <a href="configuracoes.html" class="item">⚙️ Configurações</a>
+        <a href="reservas.html" class="item">📖 Reservas</a>
+      </nav>
+    </aside>
+
+    <div class="corpo">
+      <header class="topo">
+        <a href="perfil.html" class="usuario-topo">
+          <img src="imagens/avatar-joao.svg" alt="Foto de João da Silva">
+          <span>João da Silva</span>
+        </a>
+      </header>
+
+      <main class="conteudo">
+        <div class="breadcrumb"><a href="index.html">Home</a> / <a href="pets.html">Pets</a> / Editar Toto</div>
+        <h1 class="titulo-pagina">Editar Pet</h1>
+
+        <form action="pets.html" method="get" class="card">
+          <h2>Dados do pet</h2>
+          <div class="formulario">
+            <div class="campo">
+              <label for="nome">Nome</label>
+              <input type="text" id="nome" name="nome" value="Toto">
+            </div>
+            <div class="campo">
+              <label for="tipo">Tipo de animal</label>
+              <select id="tipo" name="tipo">
+                <option selected>Cachorro</option>
+                <option>Gato</option>
+                <option>Coelho</option>
+                <option>Ave</option>
+              </select>
+            </div>
+            <div class="campo">
+              <label for="raca">Raça</label>
+              <input type="text" id="raca" name="raca" value="Poodle">
+            </div>
+            <div class="campo">
+              <label for="proprietario">Proprietário</label>
+              <select id="proprietario" name="proprietario">
+                <option selected>Maria da Silva</option>
+                <option>José da Silva</option>
+                <option>Ana Souza</option>
+                <option>Carlos Mendes</option>
+              </select>
+            </div>
+            <div class="campo campo-inteiro">
+              <label>Tamanho</label>
+              <div class="opcoes">
+                <label><input type="radio" name="tamanho" value="pequeno" checked> Pequeno</label>
+                <label><input type="radio" name="tamanho" value="medio"> Médio</label>
+                <label><input type="radio" name="tamanho" value="grande"> Grande</label>
+              </div>
+            </div>
+            <div class="campo campo-inteiro">
+              <label for="foto">Foto do pet</label>
+              <input type="file" id="foto" name="foto">
+            </div>
+          </div>
+
+          <div class="acoes">
+            <button type="submit" class="btn btn-primario">Salvar alterações</button>
+            <a href="pets.html" class="btn btn-secundario">Cancelar</a>
+          </div>
+        </form>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

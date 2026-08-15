@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visualizar Pet - Hotel Pet</title>
+</head>
+<body>
+  <div class="container">
+    <aside class="menu-lateral">
+      <div class="logo">
+        <img src="imagens/logo.svg" alt="Logo do Hotel Pet">
+        <span>Hotel Pet</span>
+      </div>
+      <nav class="menu">
+        <a href="pets.html" class="item ativo">🐾 Pet</a>
+        <a href="usuarios.html" class="item">👤 Usuários</a>
+        <a href="configuracoes.html" class="item">⚙️ Configurações</a>
+        <a href="reservas.html" class="item">📖 Reservas</a>
+      </nav>
+    </aside>
+
+    <div class="corpo">
+      <header class="topo">
+        <a href="perfil.html" class="usuario-topo">
+          <img src="imagens/avatar-joao.svg" alt="Foto de João da Silva">
+          <span>João da Silva</span>
+        </a>
+      </header>
+
+      <main class="conteudo">
+        <div class="breadcrumb"><a href="index.html">Home</a> / <a href="pets.html">Pets</a> / Toto</div>
+        <h1 class="titulo-pagina">Toto</h1>
+
+        <div class="acoes">
+          <a href="pet_editar.html" class="btn btn-primario">✏️ Editar pet</a>
+          <a href="pets.html" class="btn btn-perigo">🗑️ Deletar pet</a>
+        </div>
+
+        <section class="card">
+          <h2>Informações do pet</h2>
+          <div class="formulario">
+            <div class="campo campo-inteiro">
+              <div class="pet-foto-destaque">🐶</div>
+            </div>
+            <div class="campo">
+              <label>Nome</label>
+              <span>Toto</span>
+            </div>
+            <div class="campo">
+              <label>Tipo de animal</label>
+              <span>Cachorro</span>
+            </div>
+            <div class="campo">
+              <label>Raça</label>
+              <span>Poodle</span>
+            </div>
+            <div class="campo">
+              <label>Tamanho</label>
+              <span>Pequeno</span>
+            </div>
+            <div class="campo">
+              <label>Proprietário</label>
+              <span>Maria da Silva</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2>Histórico de reservas</h2>
+          <table class="tabela">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Check-in</th>
+                <th>Check-out</th>
+                <th>Diárias</th>
+                <th>Status</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>#1</td>
+                <td>10/08/2026</td>
+                <td>14/08/2026</td>
+                <td>4</td>
+                <td><span class="status status-andamento">Em andamento</span></td>
+                <td><a href="reserva_visualizar.html" class="acao-link acao-visualizar">Visualizar</a></td>
+              </tr>
+              <tr>
+                <td>#7</td>
+                <td>20/06/2026</td>
+                <td>25/06/2026</td>
+                <td>5</td>
+                <td><span class="status status-finalizada">Finalizada</span></td>
+                <td><a href="reserva_visualizar.html" class="acao-link acao-visualizar">Visualizar</a></td>
+              </tr>
+              <tr>
+                <td>#11</td>
+                <td>05/04/2026</td>
+                <td>08/04/2026</td>
+                <td>3</td>
+                <td><span class="status status-finalizada">Finalizada</span></td>
+                <td><a href="reserva_visualizar.html" class="acao-link acao-visualizar">Visualizar</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visualizar Usuário - Hotel Pet</title>
+</head>
+<body>
+  <div class="container">
+    <aside class="menu-lateral">
+      <div class="logo">
+        <img src="imagens/logo.svg" alt="Logo do Hotel Pet">
+        <span>Hotel Pet</span>
+      </div>
+      <nav class="menu">
+        <a href="pets.html" class="item">🐾 Pet</a>
+        <a href="usuarios.html" class="item ativo">👤 Usuários</a>
+        <a href="configuracoes.html" class="item">⚙️ Configurações</a>
+        <a href="reservas.html" class="item">📖 Reservas</a>
+      </nav>
+    </aside>
+
+    <div class="corpo">
+      <header class="topo">
+        <a href="perfil.html" class="usuario-topo">
+          <img src="imagens/avatar-joao.svg" alt="Foto de João da Silva">
+          <span>João da Silva</span>
+        </a>
+      </header>
+
+      <main class="conteudo">
+        <div class="breadcrumb"><a href="index.html">Home</a> / <a href="usuarios.html">Usuários</a> / Maria da Silva</div>
+        <h1 class="titulo-pagina">Maria da Silva</h1>
+
+        <div class="acoes">
+          <a href="usuario_editar.html" class="btn btn-primario">✏️ Editar usuário</a>
+          <button type="button" class="btn btn-sucesso">✓ Mudar status</button>
+          <button type="button" class="btn btn-perigo">🗑️ Remover</button>
+        </div>
+
+        <section class="card">
+          <h2>Informações do usuário</h2>
+          <div class="perfil-visualizar">
+            <img src="imagens/avatar-maria.svg" alt="Foto de Maria da Silva" class="avatar-grande">
+            <div class="perfil-dados">
+              <div class="linha"><strong>Nome</strong> Maria da Silva</div>
+              <div class="linha"><strong>Email</strong> maria@pet.com</div>
+              <div class="linha"><strong>Telefone</strong> (77) 98888-7777</div>
+              <div class="linha"><strong>Função</strong> Funcionário</div>
+              <div class="linha"><strong>Status</strong> <span class="status status-ativo">Ativo</span></div>
+              <div class="linha"><strong>Criado em</strong> 19/02/2020</div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

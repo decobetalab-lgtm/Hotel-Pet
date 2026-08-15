@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Perfil - Hotel Pet</title>
+</head>
+<body>
+  <div class="container">
+    <aside class="menu-lateral">
+      <div class="logo">
+        <img src="imagens/logo.svg" alt="Logo do Hotel Pet">
+        <span>Hotel Pet</span>
+      </div>
+      <nav class="menu">
+        <a href="pets.html" class="item">🐾 Pet</a>
+        <a href="usuarios.html" class="item">👤 Usuários</a>
+        <a href="configuracoes.html" class="item">⚙️ Configurações</a>
+        <a href="reservas.html" class="item">📖 Reservas</a>
+      </nav>
+    </aside>
+
+    <div class="corpo">
+      <header class="topo">
+        <a href="perfil.html" class="usuario-topo">
+          <img src="imagens/avatar-joao.svg" alt="Foto de João da Silva">
+          <span>João da Silva</span>
+        </a>
+      </header>
+
+      <main class="conteudo">
+        <div class="breadcrumb"><a href="index.html">Home</a> / Meu perfil</div>
+        <h1 class="titulo-pagina">Meu Perfil</h1>
+
+        <form action="perfil.html" method="get" class="card">
+          <h2>Informações pessoais</h2>
+          <div class="perfil-visualizar" style="margin-bottom:20px;">
+            <img src="imagens/avatar-joao.svg" alt="Foto de João da Silva" class="avatar-grande">
+          </div>
+          <div class="formulario">
+            <div class="campo">
+              <label for="nome">Nome</label>
+              <input type="text" id="nome" name="nome" value="João da Silva">
+            </div>
+            <div class="campo">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" value="joao@pet.com">
+            </div>
+            <div class="campo">
+              <label for="telefone">Telefone</label>
+              <input type="tel" id="telefone" name="telefone" value="(77) 99999-8888">
+            </div>
+            <div class="campo">
+              <label for="funcao">Função</label>
+              <input type="text" id="funcao" name="funcao" value="Gerente" disabled>
+            </div>
+            <div class="campo campo-inteiro">
+              <label for="foto">Foto do perfil</label>
+              <input type="file" id="foto" name="foto">
+            </div>
+          </div>
+
+          <div class="acoes">
+            <button type="submit" class="btn btn-primario">Salvar alterações</button>
+            <a href="index.html" class="btn btn-secundario">Cancelar</a>
+          </div>
+        </form>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

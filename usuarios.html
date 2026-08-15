@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Usuários - Hotel Pet</title>
+</head>
+<body>
+  <div class="container">
+    <aside class="menu-lateral">
+      <div class="logo">
+        <img src="imagens/logo.svg" alt="Logo do Hotel Pet">
+        <span>Hotel Pet</span>
+      </div>
+      <nav class="menu">
+        <a href="pets.html" class="item">🐾 Pet</a>
+        <a href="usuarios.html" class="item ativo">👤 Usuários</a>
+        <a href="configuracoes.html" class="item">⚙️ Configurações</a>
+        <a href="reservas.html" class="item">📖 Reservas</a>
+      </nav>
+    </aside>
+
+    <div class="corpo">
+      <header class="topo">
+        <a href="perfil.html" class="usuario-topo">
+          <img src="imagens/avatar-joao.svg" alt="Foto de João da Silva">
+          <span>João da Silva</span>
+        </a>
+      </header>
+
+      <main class="conteudo">
+        <div class="breadcrumb"><a href="index.html">Home</a> / Usuários</div>
+        <h1 class="titulo-pagina">Usuários</h1>
+
+        <div class="acoes">
+          <a href="usuario_cadastrar.html" class="btn btn-primario">+ Novo</a>
+          <button type="button" class="btn btn-perigo">Remover</button>
+          <button type="button" class="btn btn-sucesso">✓ Mudar status</button>
+        </div>
+
+        <section class="card">
+          <h2>Filtros de pesquisa</h2>
+          <div class="filtro">
+            <div class="campo">
+              <label for="f-id">ID</label>
+              <input type="text" id="f-id" placeholder="Ex.: 12">
+            </div>
+            <div class="campo">
+              <label for="f-criado-de">Criado em (de)</label>
+              <input type="date" id="f-criado-de">
+            </div>
+            <div class="campo">
+              <label for="f-criado-ate">Criado em (até)</label>
+              <input type="date" id="f-criado-ate">
+            </div>
+            <div class="campo">
+              <label for="f-email">Email</label>
+              <input type="email" id="f-email" placeholder="nome@email.com">
+            </div>
+            <div class="campo">
+              <label for="f-nome">Nome</label>
+              <input type="text" id="f-nome" placeholder="Nome do usuário">
+            </div>
+            <div class="campo">
+              <label for="f-status">Status</label>
+              <select id="f-status">
+                <option>Todos</option>
+                <option>Ativo</option>
+                <option>Inativo</option>
+              </select>
+            </div>
+            <div class="campo">
+              <label for="f-funcao">Função</label>
+              <select id="f-funcao">
+                <option>Todas</option>
+                <option>Cliente</option>
+                <option>Funcionário</option>
+                <option>Gerente</option>
+              </select>
+            </div>
+            <div class="filtro-acoes">
+              <button type="button" class="btn btn-primario">🔍 Pesquisar</button>
+              <button type="button" class="btn btn-secundario">↻ Limpar</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="card">
+          <table class="tabela">
+            <thead>
+              <tr>
+                <th>Foto</th>
+                <th>Email</th>
+                <th>Nome</th>
+                <th>Função</th>
+                <th>Status</th>
+                <th>Criado em</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><img src="imagens/avatar-joao.svg" alt="Foto de João da Silva" class="avatar-mini"></td>
+                <td>joao@pet.com</td>
+                <td>João da Silva</td>
+                <td>Gerente</td>
+                <td><span class="status status-ativo">Ativo</span></td>
+                <td>19/02/2020</td>
+                <td>
+                  <a href="usuario_editar.html" class="acao-link acao-editar">Editar</a>
+                  <a href="usuario_visualizar.html" class="acao-link acao-visualizar">Visualizar</a>
+                </td>
+              </tr>
+              <tr>
+                <td><img src="imagens/avatar-maria.svg" alt="Foto de Maria da Silva" class="avatar-mini"></td>
+                <td>maria@pet.com</td>
+                <td>Maria da Silva</td>
+                <td>Funcionário</td>
+                <td><span class="status status-ativo">Ativo</span></td>
+                <td>19/02/2020</td>
+                <td>
+                  <a href="usuario_editar.html" class="acao-link acao-editar">Editar</a>
+                  <a href="usuario_visualizar.html" class="acao-link acao-visualizar">Visualizar</a>
+                </td>
+              </tr>
+              <tr>
+                <td><img src="imagens/avatar-jose.svg" alt="Foto de José da Silva" class="avatar-mini"></td>
+                <td>jose@pet.com</td>
+                <td>José da Silva</td>
+                <td>Cliente</td>
+                <td><span class="status status-inativo">Inativo</span></td>
+                <td>19/02/2020</td>
+                <td>
+                  <a href="usuario_editar.html" class="acao-link acao-editar">Editar</a>
+                  <a href="usuario_visualizar.html" class="acao-link acao-visualizar">Visualizar</a>
+                </td>
+              </tr>
+              <tr>
+                <td><img src="imagens/avatar-ana.svg" alt="Foto de Ana Souza" class="avatar-mini"></td>
+                <td>ana@pet.com</td>
+                <td>Ana Souza</td>
+                <td>Cliente</td>
+                <td><span class="status status-ativo">Ativo</span></td>
+                <td>03/05/2021</td>
+                <td>
+                  <a href="usuario_editar.html" class="acao-link acao-editar">Editar</a>
+                  <a href="usuario_visualizar.html" class="acao-link acao-visualizar">Visualizar</a>
+                </td>
+              </tr>
+              <tr>
+                <td><img src="imagens/avatar-carlos.svg" alt="Foto de Carlos Mendes" class="avatar-mini"></td>
+                <td>carlos@pet.com</td>
+                <td>Carlos Mendes</td>
+                <td>Cliente</td>
+                <td><span class="status status-ativo">Ativo</span></td>
+                <td>12/09/2022</td>
+                <td>
+                  <a href="usuario_editar.html" class="acao-link acao-editar">Editar</a>
+                  <a href="usuario_visualizar.html" class="acao-link acao-visualizar">Visualizar</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

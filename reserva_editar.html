@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editar Reserva - Hotel Pet</title>
+</head>
+<body>
+  <div class="container">
+    <aside class="menu-lateral">
+      <div class="logo">
+        <img src="imagens/logo.svg" alt="Logo do Hotel Pet">
+        <span>Hotel Pet</span>
+      </div>
+      <nav class="menu">
+        <a href="pets.html" class="item">🐾 Pet</a>
+        <a href="usuarios.html" class="item">👤 Usuários</a>
+        <a href="configuracoes.html" class="item">⚙️ Configurações</a>
+        <a href="reservas.html" class="item ativo">📖 Reservas</a>
+      </nav>
+    </aside>
+
+    <div class="corpo">
+      <header class="topo">
+        <a href="perfil.html" class="usuario-topo">
+          <img src="imagens/avatar-joao.svg" alt="Foto de João da Silva">
+          <span>João da Silva</span>
+        </a>
+      </header>
+
+      <main class="conteudo">
+        <div class="breadcrumb"><a href="index.html">Home</a> / <a href="reservas.html">Reservas</a> / Editar reserva #1</div>
+        <h1 class="titulo-pagina">Editar Reserva #1</h1>
+
+        <form action="reservas.html" method="get" class="card" id="form-reserva">
+          <h2>Dados da reserva</h2>
+          <div class="formulario">
+            <div class="campo">
+              <label for="pet">Pet</label>
+              <select id="pet" name="pet">
+                <option selected>Toto (Poodle) - Maria da Silva</option>
+                <option>Mia (Siamês) - José da Silva</option>
+                <option>Bolinha (Angorá) - Ana Souza</option>
+              </select>
+            </div>
+            <div class="campo">
+              <label for="cliente">Cliente</label>
+              <input type="text" id="cliente" name="cliente" value="Maria da Silva">
+            </div>
+            <div class="campo">
+              <label for="checkin">Check-in</label>
+              <input type="date" id="checkin" name="checkin" value="2026-08-10">
+            </div>
+            <div class="campo">
+              <label for="checkout">Check-out</label>
+              <input type="date" id="checkout" name="checkout" value="2026-08-14">
+            </div>
+            <div class="campo">
+              <label for="status">Status</label>
+              <select id="status" name="status">
+                <option>Pendente</option>
+                <option selected>Em andamento</option>
+                <option>Finalizada</option>
+              </select>
+            </div>
+            <div class="campo">
+              <label for="valor">Valor da diária (R$)</label>
+              <input type="number" id="valor" name="valor" value="35.00" step="0.01">
+            </div>
+            <div class="campo campo-inteiro">
+              <label for="obs">Informações sobre o pet</label>
+              <textarea id="obs" name="obs">Toto é muito agitado, precisa de dois passeios por dia. Alimentação: ração 3 vezes ao dia (fornecida pelo proprietário).</textarea>
+            </div>
+
+            <div class="total-diarias">
+              <span>Total de 4 diárias × R$ 35,00 =</span>
+              <strong>R$ 140,00</strong>
+            </div>
+          </div>
+        </form>
+
+        <section class="card">
+          <h2>Anotações sobre a estadia</h2>
+          <div class="formulario">
+            <div class="campo campo-inteiro">
+              <label for="anotacao">Nova anotação</label>
+              <textarea id="anotacao" placeholder="Descreva como foi o dia do pet..."></textarea>
+            </div>
+          </div>
+          <div class="anotacao">
+            <p>Dia 1: Chegou animado, comeu bem. Pequeno passeio à tarde.</p>
+            <span class="data">Maria da Silva - 10/08/2026</span>
+          </div>
+          <div class="anotacao">
+            <p>Dia 2: Brincou bastante no pátio, adorou a nova bolinha.</p>
+            <span class="data">Maria da Silva - 11/08/2026</span>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2>Imagens da estadia</h2>
+          <div class="formulario">
+            <div class="campo campo-inteiro">
+              <label for="fotos">Adicionar imagens</label>
+              <input type="file" id="fotos" name="fotos" multiple>
+            </div>
+          </div>
+          <div class="galeria-fotos">
+            <div class="foto foto-passeio">🚶</div>
+            <div class="foto foto-brincadeira">🎾</div>
+            <div class="foto foto-refeicao">🍖</div>
+            <div class="foto foto-descanso">😴</div>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2>Recibo / Nota da estadia</h2>
+          <p class="valor-config">O recibo fica disponível quando a reserva é <strong>Finalizada</strong>.</p>
+          <div class="recibo">
+            <h2>Hotel Pet - Recibo</h2>
+            <div class="linha"><span>Hospedagem (4 diárias × R$ 35,00)</span><span>R$ 140,00</span></div>
+            <div class="linha"><span>Serviços extras</span><span>R$ 20,00</span></div>
+            <div class="linha total"><span>Total</span><span class="total">R$ 160,00</span></div>
+            <p class="assinatura">Emitido em 14/08/2026 · Hotel Pet</p>
+          </div>
+        </section>
+
+        <div class="acoes" style="margin-top:20px;">
+          <button type="submit" form="form-reserva" class="btn btn-primario">Salvar alterações</button>
+          <a href="reservas.html" class="btn btn-secundario">Cancelar</a>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
