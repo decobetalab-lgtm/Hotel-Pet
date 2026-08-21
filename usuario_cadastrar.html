@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!-- Página de cadastro de usuário. -->
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Novo Usuário - Hotel Pet</title>
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Menu lateral -->
+    <aside class="menu-lateral">
+      <div class="logo">
+        <img src="imagens/logo.svg" alt="Logo do Hotel Pet">
+        <span>Hotel Pet</span>
+      </div>
+      <nav class="menu">
+        <a href="pets.html" class="item">🐾 Pet</a>
+        <a href="usuarios.html" class="item ativo">👤 Usuários</a>
+        <a href="configuracoes.html" class="item">⚙️ Configurações</a>
+        <a href="reservas.html" class="item">📖 Reservas</a>
+      </nav>
+    </aside>
+
+    <!-- Área principal -->
+    <div class="corpo">
+      <!-- Cabeçalho -->
+      <header class="topo">
+        <a href="perfil.html" class="usuario-topo">
+          <img src="imagens/avatar-joao.svg" alt="Foto de João da Silva">
+          <span>João da Silva</span>
+        </a>
+      </header>
+
+      <!-- Conteúdo da página -->
+      <main class="conteudo">
+        <div class="breadcrumb"><a href="index.html">Home</a> / <a href="usuarios.html">Usuários</a> / Novo usuário</div>
+        <h1 class="titulo-pagina">Novo Usuário</h1>
+
+        <form action="usuarios.html" method="get" class="card">
+          <h2>Dados do usuário</h2>
+          <div class="formulario">
+            <div class="campo">
+              <label for="nome">Nome</label>
+              <input type="text" id="nome" name="nome" placeholder="Nome completo">
+            </div>
+            <div class="campo">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="nome@email.com">
+            </div>
+            <div class="campo">
+              <label for="senha">Senha</label>
+              <input type="password" id="senha" name="senha" placeholder="••••••••">
+            </div>
+            <div class="campo">
+              <label for="telefone">Telefone</label>
+              <input type="tel" id="telefone" name="telefone" placeholder="(77) 99999-9999">
+            </div>
+            <div class="campo">
+              <label for="funcao">Função</label>
+              <select id="funcao" name="funcao">
+                <option selected>Cliente</option>
+                <option>Funcionário</option>
+                <option>Gerente</option>
+              </select>
+            </div>
+            <div class="campo">
+              <label for="status">Status</label>
+              <select id="status" name="status">
+                <option selected>Ativo</option>
+                <option>Inativo</option>
+              </select>
+            </div>
+            <div class="campo campo-inteiro">
+              <label for="foto">Foto</label>
+              <input type="file" id="foto" name="foto">
+            </div>
+          </div>
+
+          <div class="acoes">
+            <button type="submit" class="btn btn-primario">Salvar usuário</button>
+            <a href="usuarios.html" class="btn btn-secundario">Cancelar</a>
+          </div>
+        </form>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
