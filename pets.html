@@ -1,12 +1,15 @@
 <!DOCTYPE html>
+<!-- Página de listagem e pesquisa de pets. -->
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pets - Hotel Pet</title>
+  <link rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
   <div class="container">
+    <!-- Menu lateral -->
     <aside class="menu-lateral">
       <div class="logo">
         <img src="imagens/logo.svg" alt="Logo do Hotel Pet">
@@ -20,7 +23,9 @@
       </nav>
     </aside>
 
+    <!-- Área principal -->
     <div class="corpo">
+      <!-- Cabeçalho -->
       <header class="topo">
         <a href="perfil.html" class="usuario-topo">
           <img src="imagens/avatar-joao.svg" alt="Foto de João da Silva">
@@ -28,6 +33,7 @@
         </a>
       </header>
 
+      <!-- Conteúdo da página -->
       <main class="conteudo">
         <div class="breadcrumb"><a href="index.html">Home</a> / Pets</div>
         <h1 class="titulo-pagina">Pets</h1>
@@ -79,6 +85,7 @@
         </section>
 
         <section class="card">
+          <div class="tabela-container">
           <table class="tabela">
             <thead>
               <tr>
@@ -94,7 +101,7 @@
             <tbody>
               <tr>
                 <td><span class="foto-pet foto-cachorro">🐶</span></td>
-                <td><span class="acao-visualizar" style="font-weight:600;">Toto</span></td>
+                <td><span class="acao-visualizar">Toto</span></td>
                 <td>Cachorro</td>
                 <td>Poodle</td>
                 <td>Pequeno</td>
@@ -106,7 +113,7 @@
               </tr>
               <tr>
                 <td><span class="foto-pet foto-gato">🐱</span></td>
-                <td><span style="font-weight:600;">Mia</span></td>
+                <td><span>Mia</span></td>
                 <td>Gato</td>
                 <td>Siamês</td>
                 <td>Pequeno</td>
@@ -118,7 +125,7 @@
               </tr>
               <tr>
                 <td><span class="foto-pet foto-coelho">🐰</span></td>
-                <td><span style="font-weight:600;">Bolinha</span></td>
+                <td><span>Bolinha</span></td>
                 <td>Coelho</td>
                 <td>Angorá</td>
                 <td>Pequeno</td>
@@ -130,7 +137,7 @@
               </tr>
               <tr>
                 <td><span class="foto-pet foto-passaro">🐦</span></td>
-                <td><span style="font-weight:600;">Piu-Piu</span></td>
+                <td><span>Piu-Piu</span></td>
                 <td>Ave</td>
                 <td>Calopsita</td>
                 <td>Pequeno</td>
@@ -142,7 +149,7 @@
               </tr>
               <tr>
                 <td><span class="foto-pet foto-cachorro">🐕</span></td>
-                <td><span style="font-weight:600;">Bob</span></td>
+                <td><span>Bob</span></td>
                 <td>Cachorro</td>
                 <td>Labrador</td>
                 <td>Grande</td>
@@ -154,6 +161,7 @@
               </tr>
             </tbody>
           </table>
+        </div>
         </section>
       </main>
     </div>
