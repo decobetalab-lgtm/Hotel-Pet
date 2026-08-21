@@ -1,0 +1,92 @@
+name: Publicar Hotel Pet
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - '**.html'
+      - '**.css'
+      - 'imagens/**'
+      - '.github/workflows/deploy.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  validar:
+    name: Validar projeto
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Verificar paginas essenciais
+        run: |
+          test -f login.html || (echo "ERRO: login.html nao encontrado" && exit 1)
+          test -f index.html || (echo "ERRO: index.html nao encontrado" && exit 1)
+          echo "Paginas essenciais OK"
+
+      - name: Verificar referencias quebradas
+        run: |
+          python3 << 'PY'
+          import re
+          import pathlib
+          import sys
+
+          erros = 0
+          for html in pathlib.Path('.').glob('*.html'):
+              texto = html.read_text(encoding='utf-8')
+              for m in re.finditer(r'(?:href|src)\s*=\s*["\']([^"\']+)["\']', texto):
+                  ref = m.group(1)
+                  if re.match(r'^(https?:|mailto:|tel:|data:|javascript:|#)', ref):
+                      continue
+                  ref_limpa = ref.split('#')[0].split('?')[0]
+                  if not ref_limpa:
+                      continue
+                  caminho = html.parent / ref_limpa
+                  if not caminho.exists():
+                      print(f"Quebrado: {html.name} -> {ref}")
+                      erros += 1
+
+          if erros:
+              print(f"\n{erros} referencia(s) quebrada(s).")
+              sys.exit(1)
+
+          print("Referencias locais OK")
+          PY
+
+  publicar:
+    name: Publicar no GitHub Pages
+    needs: validar
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Preparar site limpo
+        run: |
+          mkdir -p _site
+          cp *.html _site/
+          cp -r css _site/ 2>/dev/null || true
+          cp -r imagens _site/ 2>/dev/null || true
+
+      - name: Publicar na branch gh-pages
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git branch -D gh-pages 2>/dev/null || true
+          git checkout --orphan gh-pages
+          git rm -rf .
+          cp -r _site/* .
+          rm -rf _site
+          touch .nojekyll
+          git add .
+          git commit -m "Publicacao automatica do site Hotel Pet" || echo "Nenhuma alteracao para publicar"
+          git push origin gh-pages --force
