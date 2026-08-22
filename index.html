@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!-- Página inicial com resumo do hotel e acessos rápidos. -->
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Hotel Pet</title>
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Menu lateral -->
+    <aside class="menu-lateral">
+      <div class="logo">
+        <img src="imagens/logo.svg" alt="Logo do Hotel Pet">
+        <span>Hotel Pet</span>
+      </div>
+      <nav class="menu">
+        <a href="pets.html" class="item">🐾 Pet</a>
+        <a href="usuarios.html" class="item">👤 Usuários</a>
+        <a href="configuracoes.html" class="item">⚙️ Configurações</a>
+        <a href="reservas.html" class="item">📖 Reservas</a>
+      </nav>
+    </aside>
+
+    <!-- Área principal -->
+    <div class="corpo">
+      <!-- Cabeçalho -->
+      <header class="topo">
+        <a href="perfil.html" class="usuario-topo">
+          <img src="imagens/avatar-joao.svg" alt="Foto de João da Silva">
+          <span>João da Silva</span>
+        </a>
+      </header>
+
+      <!-- Conteúdo da página -->
+      <main class="conteudo">
+        <div class="breadcrumb"><a href="index.html">Home</a></div>
+        <h1 class="titulo-pagina">Visão Geral</h1>
+
+        <div class="cartoes-home">
+          <div class="card cartao-atual">
+            <div class="numero">12</div>
+            <div class="rotulo">Reservas ativas</div>
+          </div>
+          <div class="card cartao-atual">
+            <div class="numero">34</div>
+            <div class="rotulo">Pets hospedados</div>
+          </div>
+          <div class="card cartao-atual">
+            <div class="numero">156</div>
+            <div class="rotulo">Clientes cadastrados</div>
+          </div>
+          <div class="card cartao-atual">
+            <div class="numero">14 / 20</div>
+            <div class="rotulo">Vagas ocupadas</div>
+          </div>
+        </div>
+
+        <h2 class="titulo-pagina subtitulo-secao">Acesso rápido</h2>
+        <div class="atalhos">
+          <a href="reservas.html" class="atalho">
+            <span class="icone">📖</span>
+            <span class="nome">Reservas</span>
+            <small>Criar e acompanhar reservas</small>
+          </a>
+          <a href="pets.html" class="atalho">
+            <span class="icone">🐾</span>
+            <span class="nome">Pets</span>
+            <small>Cadastrar e consultar pets</small>
+          </a>
+          <a href="usuarios.html" class="atalho">
+            <span class="icone">👤</span>
+            <span class="nome">Usuários</span>
+            <small>Gerenciar clientes e equipe</small>
+          </a>
+          <a href="configuracoes.html" class="atalho">
+            <span class="icone">⚙️</span>
+            <span class="nome">Configurações</span>
+            <small>Diárias e vagas do hotel</small>
+          </a>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

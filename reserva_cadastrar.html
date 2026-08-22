@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!-- Página de cadastro de reserva. -->
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nova Reserva - Hotel Pet</title>
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Menu lateral -->
+    <aside class="menu-lateral">
+      <div class="logo">
+        <img src="imagens/logo.svg" alt="Logo do Hotel Pet">
+        <span>Hotel Pet</span>
+      </div>
+      <nav class="menu">
+        <a href="pets.html" class="item">🐾 Pet</a>
+        <a href="usuarios.html" class="item">👤 Usuários</a>
+        <a href="configuracoes.html" class="item">⚙️ Configurações</a>
+        <a href="reservas.html" class="item ativo">📖 Reservas</a>
+      </nav>
+    </aside>
+
+    <!-- Área principal -->
+    <div class="corpo">
+      <!-- Cabeçalho -->
+      <header class="topo">
+        <a href="perfil.html" class="usuario-topo">
+          <img src="imagens/avatar-joao.svg" alt="Foto de João da Silva">
+          <span>João da Silva</span>
+        </a>
+      </header>
+
+      <!-- Conteúdo da página -->
+      <main class="conteudo">
+        <div class="breadcrumb"><a href="index.html">Home</a> / <a href="reservas.html">Reservas</a> / Nova reserva</div>
+        <h1 class="titulo-pagina">Nova Reserva</h1>
+
+        <form action="reservas.html" method="get" class="card">
+          <h2>Dados da reserva</h2>
+          <div class="formulario">
+            <div class="campo">
+              <label for="pet">Pet</label>
+              <select id="pet" name="pet">
+                <option selected disabled>Selecione o pet</option>
+                <option>Toto (Poodle) - Maria da Silva</option>
+                <option>Mia (Siamês) - José da Silva</option>
+                <option>Bolinha (Angorá) - Ana Souza</option>
+                <option>Piu-Piu (Calopsita) - Carlos Mendes</option>
+              </select>
+            </div>
+            <div class="campo">
+              <label for="cliente">Cliente</label>
+              <input type="text" id="cliente" name="cliente" placeholder="Selecionado automaticamente">
+            </div>
+            <div class="campo">
+              <label for="checkin">Check-in</label>
+              <input type="date" id="checkin" name="checkin">
+            </div>
+            <div class="campo">
+              <label for="checkout">Check-out</label>
+              <input type="date" id="checkout" name="checkout">
+            </div>
+            <div class="campo">
+              <label for="tipo">Tipo de estadia</label>
+              <select id="tipo" name="tipo">
+                <option>Hotel (diária R$ 35,00)</option>
+                <option>Creche (período diurno)</option>
+              </select>
+            </div>
+            <div class="campo">
+              <label for="status">Status</label>
+              <select id="status" name="status">
+                <option>Pendente</option>
+                <option selected>Em andamento</option>
+                <option>Finalizada</option>
+              </select>
+            </div>
+            <div class="campo campo-inteiro">
+              <label for="obs">Informações sobre o pet</label>
+              <textarea id="obs" name="obs" placeholder="Alimentação, medicação, horários, preferências..."></textarea>
+            </div>
+
+            <div class="total-diarias">
+              <span>Total de 3 diárias × R$ 35,00 =</span>
+              <strong>R$ 105,00</strong>
+            </div>
+          </div>
+
+          <div class="acoes">
+            <button type="submit" class="btn btn-primario">Salvar reserva</button>
+            <a href="reservas.html" class="btn btn-secundario">Cancelar</a>
+          </div>
+        </form>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

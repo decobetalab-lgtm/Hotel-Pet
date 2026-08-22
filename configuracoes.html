@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!-- Página de configuração de diárias e vagas. -->
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Configurações - Hotel Pet</title>
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Menu lateral -->
+    <aside class="menu-lateral">
+      <div class="logo">
+        <img src="imagens/logo.svg" alt="Logo do Hotel Pet">
+        <span>Hotel Pet</span>
+      </div>
+      <nav class="menu">
+        <a href="pets.html" class="item">🐾 Pet</a>
+        <a href="usuarios.html" class="item">👤 Usuários</a>
+        <a href="configuracoes.html" class="item ativo">⚙ Configurações</a>
+        <a href="reservas.html" class="item">📖 Reservas</a>
+      </nav>
+    </aside>
+
+    <!-- Área principal -->
+    <div class="corpo">
+      <!-- Cabeçalho -->
+      <header class="topo">
+        <a href="perfil.html" class="usuario-topo">
+          <img src="imagens/avatar-joao.svg" alt="Foto de João da Silva">
+          <span>João da Silva</span>
+        </a>
+      </header>
+
+      <!-- Conteúdo da página -->
+      <main class="conteudo">
+        <div class="breadcrumb"><a href="index.html">Home</a> / Configurações</div>
+        <h1 class="titulo-pagina">Configurações</h1>
+
+        <!-- Configurações do valor das diárias -->
+        <form action="configuracoes.html" method="get">
+          <section class="card">
+            <h2>Valor da diária</h2>
+            <p class="valor-config">Valor cobrado por noite de hospedagem. O total das reservas é calculado automaticamente com base neste valor.</p>
+            <div class="formulario">
+              <div class="campo">
+                <label for="diaria">Valor da diária (R$)</label>
+                <input type="number" id="diaria" name="diaria" value="35.00" step="0.01" min="0">
+              </div>
+              <div class="campo">
+                <label for="diaria-extra">Diária para pets grandes (R$)</label>
+                <input type="number" id="diaria-extra" name="diaria-extra" value="45.00" step="0.01" min="0">
+              </div>
+            </div>
+          </section>
+
+          <!-- Configurações da capacidade do hotel -->
+          <section class="card">
+            <h2>Vagas disponíveis</h2>
+            <p class="valor-config">Quantidade máxima de pets que o hotel pode hospedar ao mesmo tempo.</p>
+            <div class="formulario">
+              <div class="campo">
+                <label for="vagas">Número de vagas</label>
+                <input type="number" id="vagas" name="vagas" value="20" min="1" max="100">
+              </div>
+            </div>
+            <div class="vagas-info">
+              <div class="barra-vagas"><div class="preenchida"></div></div>
+              <span class="ocupadas">14 de 20 vagas ocupadas (70%)</span>
+            </div>
+          </section>
+
+          <div class="acoes margem-superior">
+            <button type="submit" class="btn btn-primario">Salvar configurações</button>
+            <a href="index.html" class="btn btn-secundario">Cancelar</a>
+          </div>
+        </form>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<!-- Página de listagem e pesquisa de pets. -->
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pets - Hotel Pet</title>
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Menu lateral -->
+    <aside class="menu-lateral">
+      <div class="logo">
+        <img src="imagens/logo.svg" alt="Logo do Hotel Pet">
+        <span>Hotel Pet</span>
+      </div>
+      <nav class="menu">
+        <a href="pets.html" class="item ativo">🐾 Pet</a>
+        <a href="usuarios.html" class="item">👤 Usuários</a>
+        <a href="configuracoes.html" class="item">⚙️ Configurações</a>
+        <a href="reservas.html" class="item">📖 Reservas</a>
+      </nav>
+    </aside>
+
+    <!-- Área principal -->
+    <div class="corpo">
+      <!-- Cabeçalho -->
+      <header class="topo">
+        <a href="perfil.html" class="usuario-topo">
+          <img src="imagens/avatar-joao.svg" alt="Foto de João da Silva">
+          <span>João da Silva</span>
+        </a>
+      </header>
+
+      <!-- Conteúdo da página -->
+      <main class="conteudo">
+        <div class="breadcrumb"><a href="index.html">Home</a> / Pets</div>
+        <h1 class="titulo-pagina">Pets</h1>
+
+        <div class="acoes">
+          <a href="pet_cadastrar.html" class="btn btn-primario">+ Novo pet</a>
+        </div>
+
+        <section class="card">
+          <h2>Pesquisar pets</h2>
+          <div class="filtro">
+            <div class="campo">
+              <label for="f-nome">Nome</label>
+              <input type="text" id="f-nome" placeholder="Nome do pet">
+            </div>
+            <div class="campo">
+              <label for="f-tipo">Tipo</label>
+              <select id="f-tipo">
+                <option>Todos</option>
+                <option>Cachorro</option>
+                <option>Gato</option>
+                <option>Coelho</option>
+                <option>Ave</option>
+              </select>
+            </div>
+            <div class="campo">
+              <label for="f-raca">Raça</label>
+              <input type="text" id="f-raca" placeholder="Raça">
+            </div>
+            <div class="campo">
+              <label for="f-tamanho">Tamanho</label>
+              <select id="f-tamanho">
+                <option>Todos</option>
+                <option>Pequeno</option>
+                <option>Médio</option>
+                <option>Grande</option>
+              </select>
+            </div>
+            <div class="campo">
+              <label for="f-proprietario">Proprietário</label>
+              <input type="text" id="f-proprietario" placeholder="Nome do proprietário">
+            </div>
+            <div class="campo"></div>
+            <div class="filtro-acoes">
+              <button type="button" class="btn btn-primario">🔍 Pesquisar</button>
+              <button type="button" class="btn btn-secundario">↻ Limpar</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="tabela-container">
+          <table class="tabela">
+            <thead>
+              <tr>
+                <th>Foto</th>
+                <th>Nome</th>
+                <th>Tipo</th>
+                <th>Raça</th>
+                <th>Tamanho</th>
+                <th>Proprietário</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="foto-pet foto-cachorro">🐶</span></td>
+                <td><span class="acao-visualizar">Toto</span></td>
+                <td>Cachorro</td>
+                <td>Poodle</td>
+                <td>Pequeno</td>
+                <td>Maria da Silva</td>
+                <td>
+                  <a href="pet_editar.html" class="acao-link acao-editar">Editar</a>
+                  <a href="pet_visualizar.html" class="acao-link acao-visualizar">Visualizar</a>
+                </td>
+              </tr>
+              <tr>
+                <td><span class="foto-pet foto-gato">🐱</span></td>
+                <td><span>Mia</span></td>
+                <td>Gato</td>
+                <td>Siamês</td>
+                <td>Pequeno</td>
+                <td>José da Silva</td>
+                <td>
+                  <a href="pet_editar.html" class="acao-link acao-editar">Editar</a>
+                  <a href="pet_visualizar.html" class="acao-link acao-visualizar">Visualizar</a>
+                </td>
+              </tr>
+              <tr>
+                <td><span class="foto-pet foto-coelho">🐰</span></td>
+                <td><span>Bolinha</span></td>
+                <td>Coelho</td>
+                <td>Angorá</td>
+                <td>Pequeno</td>
+                <td>Ana Souza</td>
+                <td>
+                  <a href="pet_editar.html" class="acao-link acao-editar">Editar</a>
+                  <a href="pet_visualizar.html" class="acao-link acao-visualizar">Visualizar</a>
+                </td>
+              </tr>
+              <tr>
+                <td><span class="foto-pet foto-passaro">🐦</span></td>
+                <td><span>Piu-Piu</span></td>
+                <td>Ave</td>
+                <td>Calopsita</td>
+                <td>Pequeno</td>
+                <td>Carlos Mendes</td>
+                <td>
+                  <a href="pet_editar.html" class="acao-link acao-editar">Editar</a>
+                  <a href="pet_visualizar.html" class="acao-link acao-visualizar">Visualizar</a>
+                </td>
+              </tr>
+              <tr>
+                <td><span class="foto-pet foto-cachorro">🐕</span></td>
+                <td><span>Bob</span></td>
+                <td>Cachorro</td>
+                <td>Labrador</td>
+                <td>Grande</td>
+                <td>Maria da Silva</td>
+                <td>
+                  <a href="pet_editar.html" class="acao-link acao-editar">Editar</a>
+                  <a href="pet_visualizar.html" class="acao-link acao-visualizar">Visualizar</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
