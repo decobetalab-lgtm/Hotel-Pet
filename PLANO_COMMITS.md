@@ -27,4 +27,5 @@ Commits realizados:
 
 - `refactor: organiza recursos visuais`
 - `docs: atualiza documentação do Hotel Pet`
-- `ci: ajusta publicação no GitHub Pages` (se houver alterações no workflow)
+
+Em breve: `ci: ajusta publicação no GitHub Pages` (após push).
